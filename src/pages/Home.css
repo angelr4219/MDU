@@ -1,6 +1,19 @@
-/* src/pages/Home.css */
-.header {
-    font-size: 2em;
-    color: #333;
+/* Home.css */
+.home-page {
+    height: 100vh; /* Full viewport height */
+    width: 100vw;  /* Full viewport width */
+    background-color: white; /* Set background color to white */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
   
+  .welcome-section {
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 3rem;
+    border-radius: 2rem;
+    max-width: 80%;
+    margin: 2rem;
+    color: white;
+  }

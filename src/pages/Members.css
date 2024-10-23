@@ -1,0 +1,32 @@
+/* src/pages/Members.css */
+.members-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f7fafc; /* Light gray background */
+  }
+  
+  .members-list {
+    background-color: #ffffff; /* White background */
+    padding: 1.5rem; /* Padding */
+    border-radius: 0.5rem; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow */
+    width: 100%;
+    max-width: 800px; /* Max width */
+  }
+  
+  .member-item {
+    margin-bottom: 1.5rem; /* Margin between members */
+  }
+  
+  .member-item h2 {
+    font-size: 1.5rem; /* Font size for member name */
+    font-weight: bold;
+    color: #2d3748; /* Dark gray color */
+  }
+  
+  .member-item p {
+    color: #4a5568; /* Medium gray color */
+  }
