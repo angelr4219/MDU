@@ -7,3 +7,12 @@ export default {
   plugins: [],
 }
 
+module.exports = {
+  content: [
+    './src/**/*.{js,jsx,ts,tsx,html}', // Adjust paths as necessary
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+};
