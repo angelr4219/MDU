@@ -1,0 +1,115 @@
+.ucla-header {
+    display: flex;
+    justify-content: center; /* Center the items horizontally */
+    align-items: center;
+    background-color: #2774AE; /* UCLA Blue */
+    padding: 10px 0; /* Padding to give height to the navbar */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed; /* Fix the navbar to the top of the page */
+    top: 0; /* Position it at the very top */
+    left: 0; /* Align it with the left edge */
+    width: 100%; /* Full width */
+    z-index: 1000; /* Ensure it stays above other elements */
+  }
+  
+  .ucla-header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .ucla-header__logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #ffffff;
+  }
+  
+  .ucla-header__logo-link svg {
+    width: 100px;
+    height: auto;
+    margin-right: 1rem;
+  }
+  
+  .ucla-header__department {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .ucla-header__menu-toggle {
+    display: none;
+  }
+  
+  .ucla-header__nav {
+    display: flex;
+  }
+  
+  .ucla-header__nav-list {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .ucla-header__nav-item {
+    margin-left: 1.5rem;
+  }
+  
+  .ucla-header__nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .ucla-header__nav-link:hover {
+    text-decoration: underline;
+  }
+  
+  .visuallyhidden {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+  }
+  
+  @media (max-width: 768px) {
+    .ucla-header__menu-toggle {
+      display: block;
+      background: none;
+      border: none;
+      color: #ffffff;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+  
+    .ucla-header__nav {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background-color: #2774ae;
+      padding: 1rem;
+    }
+  
+    .ucla-header__nav.is-open {
+      display: block;
+    }
+  
+    .ucla-header__nav-list {
+      flex-direction: column;
+    }
+  
+    .ucla-header__nav-item {
+      margin-left: 0;
+      margin-bottom: 1rem;
+    }
+  }

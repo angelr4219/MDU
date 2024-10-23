@@ -1,0 +1,17 @@
+/* src/components/Navbar.css */
+.left img {
+    height: 2rem; /* Adjust the height of the logo */
+  }
+  
+  .center h1 {
+    font-size: 1.25rem; /* Adjust the font size of the title */
+  }
+  
+  .right a {
+    text-decoration: none; /* Remove underline from links */
+    padding: 0.5rem; /* Add padding to links */
+  }
+  
+  .right a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Add hover effect */
+  }
