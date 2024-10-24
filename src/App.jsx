@@ -8,6 +8,8 @@ import Contact from './pages/Contact';
 import Login from './pages/Login';
 import Members from './pages/Members';
 import Register from './pages/Register';
+import Calendar from './pages/Calendar';
+
 
 function App() {
   return (
@@ -20,7 +22,8 @@ function App() {
         <Route path="login" element={<Login />} />
         <Route path="members" element={<Members />} />
         <Route path="register" element={<Register />} />
-        
+        <Route path="calendar" element={<Calendar />} />
+
       </Routes>
     
   );
