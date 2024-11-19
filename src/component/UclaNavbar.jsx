@@ -40,7 +40,7 @@ const UclaNavbar = () => {
               <a href="/contact" className="ucla-header__nav-link">Contact</a>
             </li>
             <li className="ucla-header__nav-item">
-              <a href="/CalendarApp" className="ucla-header__nav-link">Calendar</a>
+              <a href="/Calendar" className="ucla-header__nav-link">Calendar</a>
             </li>
             <li className="ucla-header__nav-item">
               <a href="/login" className="ucla-header__nav-link">Login</a>

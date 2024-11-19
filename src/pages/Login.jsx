@@ -53,11 +53,13 @@ const Login = () => {
 
             <button type="submit">Log In</button>
             
-              <button type="button">Sign Up</button>
+            <button type="button">Sign Up</button>
             
             <div className="social">
               <div className="go">
                 {/* Social login buttons */}
+                <button className="google"> Google</button>
+                
               </div>
             </div>
           </form>
