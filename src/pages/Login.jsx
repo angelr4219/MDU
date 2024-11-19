@@ -1,23 +1,37 @@
 // src/components/Login.jsx
 import React, { useState } from "react";
-import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../FirebaseConfig"; // Import the configured Firebase
 import UclaNavbar from '../component/UclaNavbar';
 import './Login.css'; // Import the CSS file
+import { useNavigate } from "react-router-dom";
+import { signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
+  const navigate = useNavigate();
+
+  const googleProvider = new GoogleAuthProvider();
 
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
       const userCredential = await signInWithEmailAndPassword(auth, email, password);
       console.log("User signed in:", userCredential.user);
-      // Redirect or do something after successful login
+      navigate("/dashboard"); // Redirect to the dashboard after login
     } catch (error) {
       setError("Failed to log in. Please check your credentials.");
+    }
+  };
+
+  const handleGoogleLogin = async () => {
+    try {
+      const result = await signInWithPopup(auth, googleProvider);
+      console.log("Google user signed in:", result.user);
+      navigate("/dashboard"); // Redirect to the dashboard after Google login
+    } catch (error) {
+      setError("Failed to log in with Google.");
     }
   };
 
@@ -52,15 +66,14 @@ const Login = () => {
             {error && <p className="error">{error}</p>}
 
             <button type="submit">Log In</button>
-            
+
             <button type="button">Sign Up</button>
-            
+
             <div className="social">
-              <div className="go">
-                {/* Social login buttons */}
-                <button className="google"> Google</button>
-                
-              </div>
+              <h4>Or login with:</h4>
+              <button className="google" type="button" onClick={handleGoogleLogin}>
+                Google
+              </button>
             </div>
           </form>
         </div>
